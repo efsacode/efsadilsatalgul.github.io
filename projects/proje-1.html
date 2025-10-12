@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mühendislik Bitirme Projesi</title>
+  <meta name="description" content="Proje Adı #1 hakkında genel bakış, teknik ayrıntılar, öne çıkanlar ve bağlantılar." />
+</head>
+<body>
+  <header>
+    <h1>Proje Adı #1</h1>
+    <nav aria-label="Birincil menü">
+      <a href="../index.html">← Ana Sayfa</a> ·
+      <a href="../index.html#projeler">Projeler</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="lead">
+      <h2 id="lead">Kısa Tanım</h2>
+      <p>Birçok binada, mevcut giriş sistemleri ziyaretçileri uzaktan tespit edemiyor, gerçek zamanlı iletişim sağlayamıyor veya güvenlik personeline bildirimde bulunamıyor. Bu otomasyon ve etkileşim eksikliği, artan güvenlik risklerine, yetersiz erişim kontrolüne ve özellikle rehberliğe ihtiyaç duyan ziyaretçiler için yetersiz erişilebilirliğe yol açıyor.</p>
+      <p>Teknolojiler: Raspberry Pi, Tkinter, OpenCV, YOLO, Gemini LLM, Flutter</p>
+    </section>
+
+    <section aria-labelledby="overview">
+      <h2 id="overview">Genel Bakış</h2>
+      <p>Proje, sıradan binaları yapay zeka destekli akıllı mekanlara dönüştürmeyi amaçlıyor. Girişteki bir IP kamera, gerçek zamanlı Kişi Algılama sistemi kullanarak ziyaretçileri tespit ediyor. Bir kişi tespit edildiğinde, doğal sorular sormak ve akıllı yanıtlar vermek için LLM tabanlı bir sohbet robotu etkinleştiriliyor. Tüm sisteme bir mobil uygulama aracılığıyla da erişilebiliyor ve bu sayede kullanıcılar sistemi uzaktan izleyip yönetebiliyor.</p>
+    </section>
+
+    <section aria-labelledby="highlights">
+      <h2 id="highlights">Öne Çıkanlar</h2>
+      <ul>
+        <li>Gerçek zamanlı kişi tespiti</li>
+        <li>Ses tabanlı iletişim</li>
+        <li>Doğal dil etkileşimi</li>
+        <li>Mesafe tetiklemeli aktivasyon</li>
+        <li>Mobil izleme erişimi</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="stack">
+      <h2 id="stack">Teknik Yığın</h2>
+      <ul>
+        <li>Algılama Modülü (IP kamera + YOLOv5)</li>
+        <li>Yapay Zeka İletişimi (LLM + TTS + STT)</li>
+        <li>Ses Arayüzü (Mikrofon/Hoparlör)</li>
+        <li>Sistem Kontrol Cihazı (Raspberry Pi)</li>
+        <li>Mobil Uygulama (Flutter + Firebase)</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="../home.html#projeler">← Projelere dön</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="yil"></span> Adınız Soyadınız</p>
+  </footer>
+
+  <script>
+    // Yılı otomatik yaz (CSS/tema yok, sadece küçük rahatlık)
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

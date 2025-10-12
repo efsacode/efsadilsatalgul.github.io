@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mühendislik Bitirme Projesi</title>
+  <meta name="description" content="Proje Adı #1 hakkında genel bakış, teknik ayrıntılar, öne çıkanlar ve bağlantılar." />
+</head>
+<body>
+  <header>
+    <h1>Arduino Projeleri</h1>
+    <nav aria-label="Birincil menü">
+      <a href="../index.html">← Ana Sayfa</a> ·
+      <a href="../index.html#projeler">Projeler</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="lead">
+      <h2 id="lead">Kısa Tanım</h2>
+      <p>Arduino platformunu öğrenmek amacıyla çeşitli sensörler, LED’ler ve benzeri elektronik bileşenleri kullanarak bir dizi uygulama projesi geliştirdim. Bu projelerde temel elektronik devrelerin kurulumu, sensör verilerinin okunması, veri işleme ve çıkış kontrolü gibi süreçleri deneyimledim. Böylece hem donanım hem de yazılım tarafında Arduino’nun çalışma mantığını pekiştirerek uygulamalı bir öğrenme süreci yürüttüm. Okulda katıldığım eğitim ve kendi çalışmalarım kapsamında projeler gerçekleştirdim.</p>
+      <ul>
+        <li>Sıcaklığa uyarı veren termometre projesi. Hem ses hem de görüntü olarak uyarı veriyor. Buzzer ile ses uyarısı verirken led ile görüntü uyarısı veriyor.</li>
+        <li>LCD Ekran kullanımı.</li>
+        <li>Seven Segment kullanımı.</li>
+        <li>Dijital saat projesi. LCD ekran kullanarak saat bilgilerini gösteren bir uygulama.</li>
+      </ul>
+    </section>
+    
+    <section>
+      <a href="../home.html#projeler">← Projelere dön</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="yil"></span> Adınız Soyadınız</p>
+  </footer>
+
+  <script>
+    // Yılı otomatik yaz (CSS/tema yok, sadece küçük rahatlık)
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
