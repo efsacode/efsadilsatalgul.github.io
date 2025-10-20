@@ -3,29 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mühendislik Bitirme Projesi</title>
+  <link rel="stylesheet" href="../assets/project_style.css" />
+  <title>Arduino Projeleri</title>
   <meta name="description" content="Proje Adı #1 hakkında genel bakış, teknik ayrıntılar, öne çıkanlar ve bağlantılar." />
 </head>
 <body>
   <header>
     <h1>Arduino Projeleri</h1>
     <nav aria-label="Birincil menü">
-      <a href="../index.html">← Ana Sayfa</a> ·
-      <a href="../index.html#projeler">Projeler</a>
+      <a href="../home.html">← Ana Sayfa</a> ·
+      <a href="../home.html#projeler">Projeler</a>
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="lead">
-      <h2 id="lead">Kısa Tanım</h2>
-      <p>Arduino platformunu öğrenmek amacıyla çeşitli sensörler, LED’ler ve benzeri elektronik bileşenleri kullanarak bir dizi uygulama projesi geliştirdim. Bu projelerde temel elektronik devrelerin kurulumu, sensör verilerinin okunması, veri işleme ve çıkış kontrolü gibi süreçleri deneyimledim. Böylece hem donanım hem de yazılım tarafında Arduino’nun çalışma mantığını pekiştirerek uygulamalı bir öğrenme süreci yürüttüm. Okulda katıldığım eğitim ve kendi çalışmalarım kapsamında projeler gerçekleştirdim.</p>
-      <ul>
-        <li>Sıcaklığa uyarı veren termometre projesi. Hem ses hem de görüntü olarak uyarı veriyor. Buzzer ile ses uyarısı verirken led ile görüntü uyarısı veriyor.</li>
-        <li>LCD Ekran kullanımı.</li>
-        <li>Seven Segment kullanımı.</li>
-        <li>Dijital saat projesi. LCD ekran kullanarak saat bilgilerini gösteren bir uygulama.</li>
-      </ul>
-    </section>
+    <main>
+      <section aria-labelledby="lead">
+        <h2 id="baslik">Kısa Tanım</h2>
+        <p>Arduino platformunu öğrenmek amacıyla çeşitli sensörler, LED’ler ve benzeri elektronik bileşenleri kullanarak bir dizi uygulama projesi geliştirdim. Bu projelerde temel elektronik devrelerin kurulumu, sensör verilerinin okunması, veri işleme ve çıkış kontrolü gibi süreçleri deneyimledim. Böylece hem donanım hem de yazılım tarafında Arduino’nun çalışma mantığını pekiştirerek uygulamalı bir öğrenme süreci yürüttüm. Okulda katıldığım eğitim ve kendi çalışmalarım kapsamında projeler gerçekleştirdim.</p>
+        <ul>
+          <li>Sıcaklığa uyarı veren termometre projesi. Hem ses hem de görüntü olarak uyarı veriyor. Buzzer ile ses uyarısı verirken led ile görüntü uyarısı veriyor.</li>
+          <li>LCD Ekran kullanımı.</li>
+          <li>Seven Segment kullanımı.</li>
+          <li>Dijital saat projesi. LCD ekran kullanarak saat bilgilerini gösteren bir uygulama.</li>
+        </ul>
+      </section>
+
+    <section class="block gallery-card">
+    <h2>Görsel Galeri</h2>
+
+    <div class="slider" data-index="0">
+      <button class="slider__nav prev" aria-label="Önceki">‹</button>
+
+      <div class="slider__viewport">
+        <div class="slider__track">
+          <figure class="slide">
+            <img src="../images/arduino_pics/ledcalismasi.jpg" alt="LED çalışması">
+            <figcaption>LED çalışması</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/arduino_pics/lcd.jpg" alt="LCD ekran">
+            <figcaption>LCD ekran</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/arduino_pics/lcd_gerisayim.jpg" alt="LCD geri sayım">
+            <figcaption>LCD geri sayım</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/arduino_pics/sensor.jpg" alt="Sensör testi">
+            <figcaption>Sensör testi</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/arduino_pics/termometre.png" alt="Termometre okuması">
+            <figcaption>Termometre okuması</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="../images/arduino_pics/dijital_saat.png" alt="Dijital saat">
+            <figcaption>Dijital saat</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <button class="slider__nav next" aria-label="Sonraki">›</button>
+    </div>
+ 
+
     
     <section>
       <a href="../home.html#projeler">← Projelere dön</a>
@@ -33,12 +78,24 @@
   </main>
 
   <footer>
-    <p>© <span id="yil"></span> Adınız Soyadınız</p>
+    <p>© <span id="yil"></span> Efsa Dilşat Algül</p>
   </footer>
 
   <script>
-    // Yılı otomatik yaz (CSS/tema yok, sadece küçük rahatlık)
-    document.getElementById('yil').textContent = new Date().getFullYear();
-  </script>
+    (()=> {
+      const s = document.querySelector('.slider'); if(!s) return;
+      const track = s.querySelector('.slider__track');
+      const slides = [...s.querySelectorAll('.slide')];
+      const prev = s.querySelector('.prev'), next = s.querySelector('.next');
+      let i = 0;
+      const clamp = n => Math.max(0, Math.min(n, slides.length - 1));
+      const go = n => { i = clamp(n); track.style.transform = `translateX(-${i*100}%)`; };
+      prev.addEventListener('click', ()=> go(i-1));
+      next.addEventListener('click', ()=> go(i+1));
+      go(0);
+    })();
+</script>
+
+
 </body>
 </html>

@@ -3,21 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mühendislik Bitirme Projesi</title>
+  <link rel="stylesheet" href="../assets/project_style.css" />
+  <title>Veri Analizi Projeleri</title>
   <meta name="description" content="Proje Adı #1 hakkında genel bakış, teknik ayrıntılar, öne çıkanlar ve bağlantılar." />
 </head>
 <body>
   <header>
     <h1>Veri Analizi Projeleri</h1>
     <nav aria-label="Birincil menü">
-      <a href="../index.html">← Ana Sayfa</a> ·
-      <a href="../index.html#projeler">Projeler</a>
+      <a href="../home.html">← Ana Sayfa</a> ·
+      <a href="../home.html#projeler">Projeler</a>
     </nav>
   </header>
 
   <main>
     <section aria-labelledby="lead">
-      <h2 id="lead">Kısa Tanım</h2>
+      <h2 id="baslik">Kısa Tanım</h2>
       <p>Veri analizi projeleri kapsamında, çeşitli veri setlerini kullanarak analizler gerçekleştirdim. Bu projelerde veri ön işleme, görselleştirme ve modelleme süreçlerini deneyimledim. Böylece veri analizi ve makine öğrenmesi konularında uygulamalı bir öğrenme süreci yürüttüm.</p>
       <p>Projelerimi okulda gördüğüm ders projeleri kapsamında hem ekip olarak hem de tek başıma gerçekleştirdim.</p>
       <p>Bu projelerde, veri setlerini analiz ederek içgörüler elde etmeye çalıştım ve bu süreçte farklı araçlar ve teknikler kullandım.</p>
@@ -30,6 +31,74 @@
         <li>Python</li>
       </ul>
     </section>
+
+    <section class="block gallery-card">
+    <h2>Veri Analizi Çalışmalarından Örnek Grafikler</h2>
+
+    <div class="slider" data-index="0">
+      <button class="slider__nav prev" aria-label="Önceki">‹</button>
+
+      <div class="slider__viewport">
+        <div class="slider__track">
+          <figure class="slide">
+            <img src="../images/verianalizi/va1.png" alt="LED çalışması">
+            <figcaption>LED çalışması</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/verianalizi/va2.png" alt="LCD ekran">
+            <figcaption>LCD ekran</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/verianalizi/va3.png" alt="LCD geri sayım">
+            <figcaption>LCD geri sayım</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/verianalizi/va4.png" alt="Sensör testi">
+            <figcaption>Sensör testi</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/verianalizi/va5.png" alt="Termometre okuması">
+            <figcaption>Termometre okuması</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="../images/verianalizi/va6.png" alt="Dijital saat">
+            <figcaption>Dijital saat</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <button class="slider__nav next" aria-label="Sonraki">›</button>
+    </div>
+ 
+  </section>
+
+  <section class="block gallery-card">
+    <h2>SSO Çalışması</h2>
+
+    <div class="slider" data-index="0">
+      <button class="slider__nav prev" aria-label="Önceki">‹</button>
+      <div class="slider__viewport">
+        <div class="slider__track">
+          <figure class="slide">
+            <img src="../images/SSO/sso1.png" alt="LED çalışması">
+            <figcaption>LED çalışması</figcaption>
+          </figure>
+
+          <figure class="slide">
+            <img src="../images/SSO/sso2.png" alt="LCD ekran">
+            <figcaption>LCD ekran</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <button class="slider__nav next" aria-label="Sonraki">›</button>
+    </div>
+ 
+  </section>
     
     <section>
       <a href="../home.html#projeler">← Projelere dön</a>
@@ -38,6 +107,45 @@
 
   <footer>
     <p>© <span id="yil"></span> Adınız Soyadınız</p>
+  </footer>
+
+  <script>
+(() => {
+  // Sayfadaki TÜM slider'ları çalıştır
+  document.querySelectorAll('.slider').forEach((s) => {
+    const track  = s.querySelector('.slider__track');
+    const slides = Array.from(s.querySelectorAll('.slide'));
+    const prev   = s.querySelector('.prev');
+    const next   = s.querySelector('.next');
+
+    let i = 0;
+    const clamp = (n) => Math.max(0, Math.min(n, slides.length - 1));
+    const go = (n) => {
+      i = clamp(n);
+      track.style.transform = `translateX(-${i * 100}%)`;
+    };
+
+    // butonlar
+    prev?.addEventListener('click', () => go(i - 1));
+    next?.addEventListener('click', () => go(i + 1));
+
+    // basit swipe
+    let startX = null;
+    track.addEventListener('pointerdown', (e) => { startX = e.clientX; });
+    track.addEventListener('pointerup',   (e) => {
+      if (startX == null) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+      startX = null;
+    });
+
+    go(0);
+  });
+})();
+</script>
+
+  <footer>
+    <p>© <span id="yil"></span> Efsa Dilşat Algül</p>
   </footer>
 
   <script>

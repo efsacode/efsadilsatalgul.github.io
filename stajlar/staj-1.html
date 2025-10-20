@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{Şirket Adı} – {Rol} (Staj Detayı)</title>
-  <meta name="description" content="{Şirket Adı} stajında yaptıklarımın özeti, sorumluluklar ve teknolojiler." />
+  <link rel="stylesheet" href="../assets/staj_style.css" />
+  <title>Staj Deneyimleri</title>
+  <meta name="description" content="Staj Deneyimlerim"/>
 </head>
 <body>
   <header>
@@ -22,23 +23,26 @@
       <p>Stajım süresince masaüstü ortamda çalışan bir arayüz sistemi geliştirdim. Bu proje, hem kullanıcı arayüzü tasarımı hem de arka plan süreç otomasyonu konularında önemli deneyimler kazandırdı.</p>
     </section>
 
-    <section aria-labelledby="achievements">
-      <h2 id="achievements">Öne Çıkan Sonuçlar</h2>
-      <ul>
-        <li>Yazılımda gelişme.</li>
-        <li>İş ortamı ve sunum tecrübesi edinme.</li>
-        <li>Qt, PyQt öğrenme.</li>
-        <li>Excel uygulamasını database olarak kullanma.</li>
-      </ul>
-    </section>
+    <div class="row-2 info-cards">
+      <section aria-labelledby="achievements">
+        <h2 id="achievements">Öne Çıkan Sonuçlar</h2>
+        <ul>
+          <li>Yazılımda gelişme.</li>
+          <li>İş ortamı ve sunum tecrübesi edinme.</li>
+          <li>Qt, PyQt öğrenme.</li>
+          <li>Excel uygulamasını database olarak kullanma.</li>
+        </ul>
+      </section>
 
-    <section aria-labelledby="stack">
-      <h2 id="stack">Kullanılan Teknolojiler</h2>
-      <ul>
-        <li>Python, PyQt5</li>
-        <li>Qt Designer</li>
-        <li>Excel</li>
-    </section>
+      <section aria-labelledby="stack">
+        <h2 id="stack">Kullanılan Teknolojiler</h2>
+        <ul>
+          <li>Python, PyQt5</li>
+          <li>Qt Designer</li>
+          <li>Excel</li>
+      </section>
+
+    </div>
 
     <!-- isteğe bağlı -->
     <!-- <section aria-labelledby="links">
@@ -46,13 +50,13 @@
       <p><a href="#" rel="noopener">Notlar/Case Study</a></p>
     </section> -->
 
-    <section>
+    <div>
       <a href="../home.html#tecrube">← Tecrübe listesine dön</a>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <p>© <span id="yil"></span> Adınız Soyadınız</p>
+    <p>© <span id="yil"></span> Efsa Dilşat Algül</p>
   </footer>
 
   <script>

@@ -3,23 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../assets/project_style.css" />
   <title>Simülasyon Projesi</title>
   <meta name="description" content="Proje Adı #1 hakkında genel bakış, teknik ayrıntılar, öne çıkanlar ve bağlantılar." />
 </head>
 <body>
   <header>
-    <h1>Proje Adı #1</h1>
+    <h1>Simülasyon Projesi</h1>
     <nav aria-label="Birincil menü">
-      <a href="../index.html">← Ana Sayfa</a> ·
-      <a href="../index.html#projeler">Projeler</a>
+      <a href="../home.html">← Ana Sayfa</a> ·
+      <a href="../home.html#projeler">Projeler</a>
     </nav>
   </header>
 
   <main>
     <section aria-labelledby="lead">
-      <h2 id="lead">Kısa Tanım</h2>
+      <h2 id="baslik">Kısa Tanım</h2>
       <p>Unity ve Arduino platformlarını kullanarak BMP180 ve MPU6050 sensörlerinden elde edilen IMU verileri ile gerçek zamanlı olarak bir model drone’un hareketlerini Unity ortamında simüle eden bir proje geliştirdim..</p>
     </section>
+
+     <div class="video-row">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/xEpLpBx3m94?si=dAlOqo8KJmBsPxF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0iUTjpVw6ts?si=h_JL_2jB5WsaBuUW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 
     <section aria-labelledby="overview">
       <h2 id="overview">Kazanımlar</h2>
@@ -30,33 +36,37 @@
       </ul>
     </section>
 
-    <section aria-labelledby="highlights">
-      <h2 id="highlights">Öne Çıkanlar</h2>
-      <ul>
-        <li>Drone sensörlerinden gelen ivme, açısal hız ve basınç verilerini işleyerek sanal ortamda birebir hareketleri canlandırmak</li>
-        <li>Sensör verilerinin kalibrasyonu ve entegrasyon sürecini deneyimleyerek ileri seviye gömülü sistem bilgisi kazanmak</li>
-        <li>Unity ile gerçek zamanlı veri akışını yönetme ve görselleştirme becerilerini geliştirmek</li>
-      </ul>
-    </section>
+   
+    <div class="row-2">
+      <section aria-labelledby="highlights">
+        <h2 id="highlights">Öne Çıkanlar</h2>
+        <ul>
+          <li>Drone sensörlerinden gelen ivme, açısal hız ve basınç verilerini işleyerek sanal ortamda birebir hareketleri canlandırmak</li>
+          <li>Sensör verilerinin kalibrasyonu ve entegrasyon sürecini deneyimleyerek ileri seviye gömülü sistem bilgisi kazanmak</li>
+          <li>Unity ile gerçek zamanlı veri akışını yönetme ve görselleştirme becerilerini geliştirmek</li>
+        </ul>
+      </section>
 
-    <section aria-labelledby="stack">
-      <h2 id="stack">Teknik Yığın</h2>
-      <ul>
-        <li>Arduino UNO: Sensörlerden gelen verilerin okunması ve seri haberleşme ile Unity’ye aktarılması</li>
-        <li>MPU6050: 6 eksenli IMU sensörü (ivmeölçer ve jiroskop)</li>
-        <li>BMP180: Basınç ve yükseklik sensörü</li>
-        <li>Unity: Drone’un 3D modelini ve hareket simülasyonunu oluşturmak için oyun motoru</li>
-        <li>C# & Arduino IDE: Kodlama ve veri iletişimi</li>
-      </ul>
-    </section>
+      <section aria-labelledby="stack">
+        <h2 id="stack">Teknik Yığın</h2>
+        <ul>
+          <li>Arduino UNO: Sensörlerden gelen verilerin okunması ve seri haberleşme ile Unity’ye aktarılması</li>
+          <li>MPU6050: 6 eksenli IMU sensörü (ivmeölçer ve jiroskop)</li>
+          <li>BMP180: Basınç ve yükseklik sensörü</li>
+          <li>Unity: Drone’un 3D modelini ve hareket simülasyonunu oluşturmak için oyun motoru</li>
+          <li>C# & Arduino IDE: Kodlama ve veri iletişimi</li>
+        </ul>
+      </section>
 
-    <section>
+    </div>
+
+    <div>
       <a href="../home.html#projeler">← Projelere dön</a>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <p>© <span id="yil"></span> Adınız Soyadınız</p>
+    <p>© <span id="yil"></span> Efsa Dilşat Algül</p>
   </footer>
 
   <script>

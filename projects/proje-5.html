@@ -3,35 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mühendislik Bitirme Projesi</title>
+  <link rel="stylesheet" href="../assets/project_style.css" />
+  <title>Interface, Desktop Application Projeleri</title>
   <meta name="description" content="Proje Adı #1 hakkında genel bakış, teknik ayrıntılar, öne çıkanlar ve bağlantılar." />
 </head>
 <body>
   <header>
-    <h1>Oyun Geliştirme Projeleri</h1>
+    <h1>Interface, Desktop Application Projeleri</h1>
     <nav aria-label="Birincil menü">
-      <a href="../index.html">← Ana Sayfa</a> ·
-      <a href="../index.html#projeler">Projeler</a>
+      <a href="../home.html">← Ana Sayfa</a> ·
+      <a href="../home.html#projeler">Projeler</a>
     </nav>
   </header>
 
   <main>
     <section aria-labelledby="lead">
-      <h2 id="lead">Kısa Tanım</h2>
+      <h2 id="baslik">Kısa Tanım</h2>
       <p>Stajımda ve okul projeleri olarak PyQt, Tkinter, C#, Java programlama dilleri kullanarak desktop uygulamaları geliştirdim.</p>
     </section>
 
     <section aria-labelledby="overview">
       <h2 id="overview">Bandwidth Tracker</h2>
-      <p>Python, PyQt kullanarak bandwidth ölçüp kullanıcının belirlediği internet aşımı sınırlarına ulaşıldığında uyarı e-mail'i gönderen bir arayüz programı üzerine çalıştım.</p>
-      <p>Bu projeyi ders projesi olarak geliştirdim.</p>
+      <div class="video-row">
+      <p>Python, PyQt kullanarak bandwidth ölçüp kullanıcının belirlediği internet aşımı sınırlarına ulaşıldığında uyarı e-mail'i gönderen bir arayüz programı üzerine çalıştım. Bu projeyi ders projesi olarak geliştirdim.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/HxM2pXoTDcQ?si=lGFK07lBjTDN14Mi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
     </section>
 
-    <section aria-labelledby="overview">
-      <h2 id="overview">Audio Player</h2>
+    <section class="block gallery-card">
+  <h2>Audio Player</h2>
+
+  <div class="two-col">
+    <!-- Sol: Tanıtım yazısı -->
+    <div class="text">
       <p>C# Forms kullanarak ekip arkadaşlarımla gerçekleştirdiğimiz bir okul projesidir.</p>
       <p>Bu proje, temel müzik çalma işlevlerine sahip bir masaüstü uygulamasıdır. Kullanıcılar, yerel dosyalarından müzik dosyalarını seçebilir, uygulama içerisine bu dosyaları kaydedip oynatabilir, duraklatabilir ve durdurabilirler. Ayrıca, ses seviyesini ayarlamak ve şarkılar arasında geçiş yapmak için kontroller de mevcuttur.</p>
-    </section>
+    </div>
+
+    <!-- Sağ: Görsel slider'ı (mevcut slider’ını taşıyoruz) -->
+    <div>
+      <div class="slider" data-index="0">
+        <button class="slider__nav prev" aria-label="Önceki">‹</button>
+        <div class="slider__viewport">
+          <div class="slider__track">
+            <figure class="slide">
+              <img src="../images/audioplayer/ap1.png" alt="Uygulama ana ekranı">
+              <figcaption>Uygulama ana ekranı</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="../images/audioplayer/ap2.png" alt="Playlist görünümü">
+              <figcaption>Playlist görünümü</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="../images/audioplayer/ap3.png" alt="Çalma kontrolleri">
+              <figcaption>Çalma kontrolleri</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="../images/audioplayer/ap4.png" alt="Ses seviyesi">
+              <figcaption>Ayarlara genel bakış</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="../images/audioplayer/ap5.png" alt="Ayarlara genel bakış">
+              <figcaption>Ayarlara genel bakış</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="slider__nav next" aria-label="Sonraki">›</button>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section aria-labelledby="overview">
       <h2 id="overview">Otomasyon Belge Projesi</h2>
@@ -42,11 +83,13 @@
 
     <section aria-labelledby="overview">
       <h2 id="overview">Task Manager</h2>
-      <p>Bu proje Java ile geliştirilmiş bir arayüz uygulamasıdır.</p>
-      <p>Ders projesi kapsamında geliştirilmiştir.</p>
-      <p>Kullanıcı dijital bir ajanda niteliğinde bu uygulamayı kullanarak görevlerini yönetebilir ve notlar alabilir.</p>
-      <p>Alınan notlar, eklenen görevler kaydedilir ve uygulama kapanıp açıldığında kaydedilen verilere erişim sağlanır.</p>
-    
+      
+      <div class="video-row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Rr5s9wq1poM?si=JfpWYry9ifxUSa1p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <p>Bu proje Java ile geliştirilmiş bir arayüz uygulamasıdır. Ders projesi kapsamında geliştirilmiştir. Kullanıcı dijital bir ajanda niteliğinde bu uygulamayı kullanarak görevlerini yönetebilir ve notlar alabilir. Alınan notlar, eklenen görevler kaydedilir ve uygulama kapanıp açıldığında kaydedilen verilere erişim sağlanır.</p>
+      </div>
+      
     </section>
 
     <section>
@@ -54,13 +97,32 @@
     </section>
   </main>
 
+
+
+  <script>
+    (()=> {
+      const s = document.querySelector('.slider'); if(!s) return;
+      const track = s.querySelector('.slider__track');
+      const slides = [...s.querySelectorAll('.slide')];
+      const prev = s.querySelector('.prev'), next = s.querySelector('.next');
+      let i = 0;
+      const clamp = n => Math.max(0, Math.min(n, slides.length - 1));
+      const go = n => { i = clamp(n); track.style.transform = `translateX(-${i*100}%)`; };
+      prev.addEventListener('click', ()=> go(i-1));
+      next.addEventListener('click', ()=> go(i+1));
+      go(0);
+    })();
+</script>
+
+
   <footer>
-    <p>© <span id="yil"></span> Adınız Soyadınız</p>
+    <p>© <span id="yil"></span>Efsa Dilşat Algül</p>
   </footer>
 
   <script>
     // Yılı otomatik yaz (CSS/tema yok, sadece küçük rahatlık)
     document.getElementById('yil').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>

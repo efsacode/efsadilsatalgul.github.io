@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{Şirket Adı} – {Rol} (Staj Detayı)</title>
-  <meta name="description" content="{Şirket Adı} stajında yaptıklarımın özeti, sorumluluklar ve teknolojiler." />
+  <link rel="stylesheet" href="../assets/staj_style.css" />
+  <title>Staj Deneyimleri</title>
+  <meta name="description" content="Staj deneyimlerim" />
 </head>
 <body>
   <header>
@@ -22,30 +23,32 @@
       <p>Staj sürecimde hem Linux sistem yönetimi hem de front-end web geliştirme alanlarında çalıştım. Bu süreçte sistem yönetimi, ağ ve güvenlik işlemleri üzerine teknik beceriler geliştirirken, aynı zamanda front-end geliştirme konusunda pratik deneyim edindim.</p>
     </section>
 
-    <section aria-labelledby="achievements">
-      <h2 id="achievements">Öne Çıkan Sonuçlar</h2>
-      <h3>Linux işletim sistemi üzerinde:</h3>
-      <ul>
-        <li>Sistem yönetimi</li>
-        <li>Genel komut kullanımı</li>
-        <li>Ağ işlemleri</li>
-        <li>Geliştirme ve çalışma ortamı yönetimi üzerine çalıştım.</li>
-      </ul>
-      <h3>Web sitesi geliştirme alanında:</h3>
-      <ul>
-        <li>API entegrasyonu ve veri alışverişi</li>
-        <li>Responsive (mobil uyumlu) tasarım</li>
-        <li>Front-end geliştirme üzerine çalıştım.</li>
-      </ul>
-    </section>
+    <div class="row-2 info-cards">
+      <section aria-labelledby="achievements">
+        <h2 id="achievements">Öne Çıkan Sonuçlar</h2>
+        <h3>Linux işletim sistemi üzerinde:</h3>
+        <ul>
+          <li>Sistem yönetimi</li>
+          <li>Genel komut kullanımı</li>
+          <li>Ağ işlemleri</li>
+          <li>Geliştirme ve çalışma ortamı yönetimi üzerine çalıştım.</li>
+        </ul>
+        <h3>Web sitesi geliştirme alanında:</h3>
+        <ul>
+          <li>API entegrasyonu ve veri alışverişi</li>
+          <li>Responsive (mobil uyumlu) tasarım</li>
+          <li>Front-end geliştirme üzerine çalıştım.</li>
+        </ul>
+      </section>
 
-    <section aria-labelledby="stack">
-      <h2 id="stack">Kullanılan Teknolojiler</h2>
-      <ul>
-        <li>Linux İşletim Sistemi</li>
-        <li>HTML-CSS</li>
-        <li>Javascript-React</li>
-    </section>
+      <section aria-labelledby="stack">
+        <h2 id="stack">Kullanılan Teknolojiler</h2>
+        <ul>
+          <li>Linux İşletim Sistemi</li>
+          <li>HTML-CSS</li>
+          <li>Javascript-React</li>
+      </section>
+    </div>
 
     <!-- isteğe bağlı -->
     <!-- <section aria-labelledby="links">
@@ -53,13 +56,13 @@
       <p><a href="#" rel="noopener">Notlar/Case Study</a></p>
     </section> -->
 
-    <section>
+    <div>
       <a href="../home.html#tecrube">← Tecrübe listesine dön</a>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <p>© <span id="yil"></span> Adınız Soyadınız</p>
+    <p>© <span id="yil"></span> Efsa Dilşat Algül</p>
   </footer>
 
   <script>

@@ -1,0 +1,465 @@
+/* ====== Tema & Temel ====== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --ink:#233528;
+  --ink-2:#304537;
+  --cream:#F4EDE3;
+  --paper:#FFF9F0;
+  --mustard:#F2A545;
+  --muted:#6b766e;
+  --radius:18px;
+  --max:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+/* ====== Üst bölüm (breadcrumb + başlık) ====== */
+.project-header{
+  max-width:var(--max);
+  margin:28px auto 0;
+  padding:18px 20px 0;
+}
+.breadcrumbs{
+  display:flex; align-items:center; gap:10px;
+  font-size:14px; color:var(--muted);
+}
+.breadcrumbs a{
+  color:var(--ink);
+  text-decoration:none; font-weight:600;
+}
+.breadcrumbs a:hover{ text-decoration:underline }
+.project-title{
+  font-family:"Playfair Display", serif;
+  font-size:clamp(32px, 5vw, 56px);
+  line-height:1.1; margin:10px 0 4px;
+  letter-spacing:.3px;
+}
+
+/* ====== Ana içerik kolon ====== */
+.project-main{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:24px 20px 64px;
+}
+
+/* Bölüm blokları */
+.block{
+  background:#fff;
+  border:1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  border-radius:var(--radius);
+  padding:22px 20px;
+  margin:18px 0;
+}
+.block > h2{
+  font-family:"Playfair Display", serif;
+  margin:0 0 10px;
+  font-size:clamp(22px, 2.6vw, 30px);
+}
+.block p{ margin:10px 0 }
+.block ul{ margin:8px 0 0 18px }
+
+/* ====== Kapak görseli / video (hero) ====== */
+.hero-media{
+  margin:12px 0 18px;
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:linear-gradient(180deg, var(--ink-2), var(--ink));
+  position:relative;
+}
+.hero-media img,
+.hero-media video{
+  display:block; width:100%; height:auto;
+  object-fit:cover;
+  mix-blend-mode:normal;
+}
+.hero-media figcaption{
+  position:absolute; bottom:12px; left:12px;
+  background:color-mix(in srgb, #000 45%, transparent);
+  color:#fff; padding:6px 10px; border-radius:10px;
+  font-size:13px;
+}
+
+/* ====== Medya kartı (genel) ====== */
+.media{
+  background:var(--paper);
+  border:1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.media img, .media video{
+  width:100%; height:auto; display:block; object-fit:cover;
+}
+
+/* ====== Rozet / teknoloji etiketleri ====== */
+.badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px }
+.badge{
+  display:inline-block;
+  padding:8px 12px; border-radius:999px;
+  background:var(--mustard); color:#111;
+  font-weight:700; font-size:13px;
+}
+
+/* ====== Öne çıkanlar checklist ====== */
+.checklist{
+  list-style:none; padding:0; margin:8px 0 0;
+}
+.checklist li{
+  position:relative; padding-left:30px; margin:8px 0;
+}
+.checklist li::before{
+  content:"✓";
+  position:absolute; left:0; top:0;
+  width:22px; height:22px;
+  display:grid; place-items:center;
+  border-radius:50%;
+  background:var(--mustard); color:#111;
+  font-weight:800; font-size:12px;
+}
+
+/* ====== Galeri (resim + video karışık) ====== */
+.gallery{
+  display:grid; gap:14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.gallery .media{ aspect-ratio: 16 / 10; }
+
+/* 2 sütuna düşür, mobilde 1 */
+@media (max-width: 1000px){
+  .gallery{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px){
+  .gallery{ grid-template-columns: 1fr; }
+}
+
+/* ====== Tablo & kod (ihtiyaç olursa) ====== */
+.table{
+  width:100%; border-collapse:separate; border-spacing:0;
+  border:1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  border-radius:12px; overflow:hidden; background:#fff;
+}
+.table th, .table td{ padding:10px 12px; border-bottom:1px solid #eee; }
+.table th{ background:var(--paper); text-align:left; }
+
+pre, code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+pre{
+  background:var(--paper); padding:12px 14px; border-radius:12px;
+  border:1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  overflow:auto;
+}
+
+/* ====== Alt bilgi ====== */
+footer{
+  margin-top:40px; padding:24px 20px;
+  background:var(--ink); color:#e9f0ea; text-align:center;
+}
+footer a{ color:#fff; }
+
+/* ====== Linkler ====== */
+a{ color:var(--ink); }
+a:hover{ color:#000; }
+
+/* Daha rahat okuma: paragraflar */
+p{ max-width:78ch }
+
+/* === Sayfa genişliğini ortala (soldan yapışmayı bitir) === */
+/* header, main, footer hepsi aynı orta kolon içinde */
+body > header,
+body > main,
+body > footer{
+  max-width: 1100px;      /* ana sayfadakiyle aynı genişlik */
+  margin-inline: auto;    /* ortala */
+  padding-inline: 20px;   /* kenarlardan rahat boşluk */
+}
+
+/* Başlık tipografisi (proje adı) */
+body > header h1{
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+  margin: 14px 0 4px;
+  color: var(--ink);
+}
+
+/* === Bölümleri otomatik “kart” yap === */
+/* Proje sayfandaki her <section> artık kutucuk görünür */
+body > main > section{
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  border-radius: 18px;
+  padding: 22px 20px;
+  margin-block: 18px;       /* kutular arası boşluk */
+  box-shadow: 0 12px 28px rgba(0,0,0,.04);
+}
+
+/* Bölüm başlıkları */
+body > main > section > h2{
+  font-family:"Playfair Display", serif;
+  font-size: clamp(22px, 2.6vw, 30px);
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+/* Listelerin nefes alması */
+body > main > section ul{ margin: 8px 0 0 18px; }
+
+/* Opsiyonel: teknoloji satırı küçük rozetler gibi görünsün */
+.badges{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px }
+.badge{
+  display:inline-block; padding:8px 12px; border-radius:999px;
+  background: var(--mustard); color:#111; font-weight:700; font-size:13px;
+}
+
+/* Galeri/medya kartları ekleyeceksen (resim & video) */
+.gallery{ display:grid; gap:14px; grid-template-columns: repeat(3, 1fr); }
+.gallery .media{ background:var(--paper); border:1px solid color-mix(in srgb, var(--ink) 12%, transparent); border-radius:18px; overflow:hidden; aspect-ratio:16/10; }
+.media img, .media video{ width:100%; height:100%; object-fit:cover; display:block; }
+@media (max-width:1000px){ .gallery{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width:640px){ .gallery{ grid-template-columns: 1fr; } }
+
+body > header h1{
+  margin-left: clamp(-8px, -1.2vw, -28px);
+}
+@media (max-width: 640px){
+  body > header h1{ margin-left: 0; }
+}
+
+/* Genel Bakış: görsel + metin yan yana */
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;   /* görsel | metin */
+  gap: 18px;
+  align-items: start;
+}
+
+/* Mevcut .media stilin kart gibi davranıyor; sadece oranı sabitleyelim */
+.two-col .media{
+              /* istersen kaldır */
+  background-color: var(--paper);
+  margin: 0;                           /* h2 ile arası temiz */
+}
+
+/* Metin sütunu daha rahat okunsun */
+.two-col .text p{ margin: 8px 10px; }
+
+/* Küçük ekran: alt alta gelsin */
+@media (max-width: 900px){
+  .two-col{ grid-template-columns: 1fr; }
+  .two-col .media{ aspect-ratio: auto; }
+}
+
+/* Yan yana iki kart */
+.row-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-block: 18px;
+}
+
+.video-row{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:16px;
+}
+.video-row iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  border:0;
+}
+
+/* Mobilde tek sütun */
+@media (max-width: 800px){
+  .video-row{ grid-template-columns: 1fr; }
+}
+
+/* row-2 içindeki section'ları kart yap */
+.row-2 > section{
+  background: var(--mustard);
+  border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.04);
+  margin: 0;
+}
+
+/* Başlık aralığı */
+.row-2 > section > h2{
+  margin: 0 0 10px;
+}
+
+/* Kısa Tanım'ı koyu yeşil karta çevir */
+section[aria-labelledby="lead"]{
+  background: linear-gradient(180deg, var(--ink-2), var(--ink)) !important;
+  color:#fff !important;
+  border:none !important;
+  box-shadow: 0 26px 60px rgba(0,0,0,.18) !important;
+  #baslik {
+  color: #fff !important;
+}
+}
+
+/* metin/link rengi ve buton tarzı */
+section[aria-labelledby="lead"] p{ color:#e8efe9; }
+section[aria-labelledby="lead"] a{
+  color:#111; background:var(--mustard);
+  text-decoration:none; font-weight:700;
+  padding:10px 14px; border-radius:999px; display:inline-block;
+}
+section[aria-labelledby="lead"] a:hover{ filter:brightness(.95); }
+
+/* Kart: arka plan görseli sağ tarafta yarı saydam */
+.block.card-with-bg{
+  position: relative;
+  overflow: hidden;
+}
+
+/* GÖRSELİN YOLU CSS DOSYASINA GÖRE verilir! */
+.block.card-with-bg::after{
+  content:"";
+  position:absolute; inset:0;
+  /* ↓↓↓ yolu kendi dizinine göre güncelle (bkz. not) ↓↓↓ */
+  background:
+    radial-gradient(ellipse at 85% 40%, rgba(0,0,0,.06), transparent 60%),
+    url("../images/kelime_avi_screenshot.png") no-repeat right center / min(60%, 520px) auto;
+  opacity:.25;                 /* şeffaflık */
+  pointer-events:none;
+  z-index:0;
+}
+
+/* İçeriği üstte tut */
+.block.card-with-bg > *{
+  position: relative;
+  z-index: 1;
+}
+.video-center iframe{
+  display:block;        /* ortalamak için blok yap */
+  margin:0 auto;        /* yatayda ortala */
+}
+
+.video-pair{
+  display:flex;
+  gap:20px;              /* ← aradaki mesafe */
+  align-items:flex-start;
+  flex-wrap:wrap;        /* dar ekranda alta geçsin */
+}
+.video-pair iframe,
+.video-pair img{
+  flex:1 1 480px;        /* yan yana dururken esnesin */
+  max-width:100%;
+  height:100%;
+  border:0;
+}
+
+/* === Slider boyut sınırları (tüm slaytlar için) === */
+.gallery-card{
+  /* tek yerden kontrol için değişkenler */
+  --slider-max-w: 960px;                         /* en fazla genişlik */
+  --slide-max-h: clamp(240px, 45vh, 520px);      /* en fazla yükseklik */
+}
+
+.gallery-card .slider__viewport{
+  max-width: var(--slider-max-w);
+  margin-inline: auto;                           /* ortala */
+}
+
+/* resimleri tek yüksekliğe oturt */
+.gallery-card .slide img{
+  width: 100%;
+  height: var(--slide-max-h);
+  object-fit: cover;    /* taşıp kesebilir; tam görünüm istersen 'contain' yap */
+  border: 0;
+  display: block;
+}
+
+/* küçük ekranda biraz daha kısa olsun */
+@media (max-width: 640px){
+  .gallery-card{
+    --slider-max-w: 100%;
+    --slide-max-h: clamp(200px, 38vh, 380px);
+  }
+}
+
+/* sadece 1 slayt görünsün */
+.slider__viewport{ overflow:hidden; border-radius:18px; background:#fff; }
+
+/* slaytları yatay şerit yap */
+.slider__track{ display:flex; transition:transform .35s ease; }
+
+/* her slayt tam genişlik kaplasın */
+.slide{ flex:0 0 100%; margin:0; display:flex; flex-direction:column; }
+.slide img{ width:100%; height:clamp(220px, 42vh, 500px); object-fit:cover; display:block; }
+.slide figcaption{ padding:10px 16px; font-size:14px; background:#fff; border-top:1px solid rgba(0,0,0,.06); }
+
+/* kapsayıcılar */
+.slider{ position: relative; }
+.slider__viewport{ position: relative; overflow: hidden; }
+
+/* slayt görseli normal katmanda */
+.slide img{ position: relative; z-index: 1; display:block; }
+
+/* oklar her zaman üstte ve içeride */
+.slider__nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;                     /* img'nin üstünde */
+  width: 44px; height: 44px; border-radius: 999px;
+  background: var(--mustard); color:#111;
+  border: 1px solid rgba(0,0,0,.12);
+  display: grid; place-items: center; cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+}
+.slider__nav.prev{ left: 12px; }  /* ← negatif değer kullanma */
+.slider__nav.next{ right: 12px; }
+
+/* Bu sınıf verilen slaytlarda kırpma yok, kenarlar boş kalabilir */
+.slide--contain img{
+  object-fit: contain;
+  background: #000;          /* istersen var(--paper) yap */
+}
+/* === SLIDER: kırpmasız sığdır (OVERRIDE) === */
+.gallery-card{
+  --slider-max-w: 960px;                     /* galeri max genişlik */
+  --slide-max-h: clamp(260px, 50vh, 560px);  /* sahne max yükseklik */
+}
+
+.gallery-card .slider__viewport{
+  max-width: var(--slider-max-w);
+  margin-inline: auto;
+}
+
+.gallery-card .slide{
+  flex: 0 0 100%;
+  display: grid;
+  place-items: center;             /* görseli sahnede ortala */
+  min-height: var(--slide-max-h);
+  background: #FFF9F0;                /* boşluk rengi (istersen #fff yap) */
+}
+
+/* ⇩ KIRPMA YOK: resimler büyüyüp/küçülerek sığar */
+.gallery-card .slide img{
+  max-width: 100% !important;
+  max-height: var(--slide-max-h) !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+
+
+
+
+
+
